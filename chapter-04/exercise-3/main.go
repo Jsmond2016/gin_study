@@ -18,5 +18,10 @@ func main() {
 	router.StaticFS("/show-dir", http.Dir("."))
 	router.StaticFile("/image", "./images/img.png")
 
+	router.GET("/redirect", func(c *gin.Context) {
+		//支持内部和外部的重定向
+		c.Redirect(http.StatusMovedPermanently, "http://www.baidu.com/")
+	})
+
 	router.Run(":8080")
 }
