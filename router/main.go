@@ -13,6 +13,12 @@ func main() {
 	router.GET("/get", func(c *gin.Context) {
 		c.String(http.StatusOK, "GET METHOD")
 	})
+
+	router.GET("/get-params/:name", func(c *gin.Context) {
+		username := c.Param("name")
+		c.String(http.StatusOK, username)
+	})
+
 	router.POST("/post", func(c *gin.Context) {
 		c.String(http.StatusOK, "POST METHOD")
 	})
