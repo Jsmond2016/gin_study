@@ -1,0 +1,11 @@
+@base = 127.0.0.1:8080
+
+### 
+GET http://{{base}}/middleware HTTP/1.1
+
+###
+GET http://{{base}}/before HTTP/1.1
+###
+
+
+
