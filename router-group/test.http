@@ -1,0 +1,15 @@
+
+@base = 127.0.0.1:8080
+
+### 
+
+GET http://{{base}}/v1/login?name=hanru HTTP/1.1
+
+###
+POST http://{{base}}/form?name=测试人员&num=2 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=Tony
+&password=123455
+&hobby="basketball"
+&hobby="running"
