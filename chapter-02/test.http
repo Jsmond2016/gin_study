@@ -33,3 +33,6 @@ Content-Type: application/x-www-form-urlencoded
 
 name=Tony
 &password=123456
+
+### URI 测试-失败
+GET http://{{base}}/login/Tony/123456 HTTP/1.1
