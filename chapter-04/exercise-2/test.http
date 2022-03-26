@@ -1,0 +1,17 @@
+
+@base = 127.0.0.1:8080
+
+### c.json 响应 gin.H 方式返回
+GET http://{{base}}/json-gin HTTP/1.1
+
+### c.json 响应  自定义对象的方式返回
+GET http://{{base}}/json HTTP/1.1
+
+### c.xml 响应 的方式返回
+GET http://{{base}}/json-xml HTTP/1.1
+
+### c.yml 响应 的方式返回
+GET http://{{base}}/json-yml HTTP/1.1
+
+### c.protobuf 响应 的方式返回
+GET http://{{base}}/protobuf HTTP/1.1
