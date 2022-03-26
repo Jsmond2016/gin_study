@@ -16,5 +16,19 @@ func main() {
 		c.String(http.StatusOK, fmt.Sprintf("Hello %s ", name))
 	})
 
+	//form
+	router.POST("/form", func(c *gin.Context) {
+		// type1 := c.DefaultPostForm("type", "alert") //可设置默认值
+		username := c.PostForm("username")
+		password := c.PostForm("password")
+
+		//hobbys := c.PostFormMap("hobby")
+		//hobbys := c.QueryArray("hobby")
+		hobbys := c.PostFormArray("hobby")
+
+		c.String(http.StatusOK, fmt.Sprintf("username is %s, password is %s,hobby is %v", username, password, hobbys))
+
+	})
+
 	router.Run()
 }
