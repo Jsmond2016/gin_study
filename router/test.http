@@ -1,0 +1,52 @@
+
+@base = 127.0.0.1:8080
+
+### 
+
+GET http://{{base}}/get?id=12312323&num=2 HTTP/1.1
+
+###
+POST http://{{base}}/post?id=12312323&num=2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Tony",
+  "password": "123456"
+}
+
+###
+PUT http://{{base}}/put?id=12312323&num=2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Tony",
+  "password": "123456"
+}
+
+###
+DELETE  http://{{base}}/delete?id=12312323&num=2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 123
+}
+
+###
+PATCH http://{{base}}/patch?id=12312323&num=2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 123
+}
+###
+HEAD  http://{{base}}/head?id=12312323&num=2 HTTP/1.1
+
+
+###
+
+OPTIONS http://{{base}}/options?id=12312323&num=2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 123
+}
