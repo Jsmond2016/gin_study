@@ -1,9 +1,9 @@
 
 @base = 127.0.0.1:8080
 
-### 错误测试
+### JSON-错误测试
 
-POST http://{{base}}/login?id=12312323&num=2 HTTP/1.1
+POST http://{{base}}/login-json?id=12312323&num=2 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -11,11 +11,25 @@ Content-Type: application/json
   "password": "123456"
 }
 
-### 正确测试
-POST http://{{base}}/login?id=12312323&num=2 HTTP/1.1
+### JSON-正确测试
+POST http://{{base}}/login-json?id=12312323&num=2 HTTP/1.1
 Content-Type: application/json
 
 {
   "name": "Tony",
   "password": "123456"
 }
+
+### Form 测试-失败
+POST http://{{base}}/login-form?id=12312323&num=2 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name=Tony
+&password=1234567
+
+### Form 测试-成功
+POST http://{{base}}/login-form?id=12312323&num=2 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name=Tony
+&password=123456
