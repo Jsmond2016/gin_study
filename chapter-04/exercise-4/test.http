@@ -1,0 +1,7 @@
+@base = 127.0.0.1:8080
+
+### 
+GET http://{{base}}/upload-async HTTP/1.1
+
+###
+GET http://{{base}}/sync HTTP/1.1
