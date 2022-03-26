@@ -1,0 +1,6 @@
+
+@base = 127.0.0.1:8080
+
+### 
+
+GET http://{{base}}/get?name=测试人员&num=2 HTTP/1.1
