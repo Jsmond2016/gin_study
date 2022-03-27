@@ -33,3 +33,11 @@ CREATE TABLE IF NOT EXISTS `user_info`(
 
 USE test;
 ```
+
+
+
+相关资料：
+
+- https://www.liwenzhou.com/posts/Go/go_mysql/  Go语言操作MySQL——李文周的博客
+
+- https://segmentfault.com/a/1190000021693989 golang 操作mysql示例（增、删、改、查、事务）
