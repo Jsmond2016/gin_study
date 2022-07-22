@@ -26,7 +26,7 @@ root/123456
 ```sql
 CREATE TABLE IF NOT EXISTS `user_info`(
    `id` INT UNSIGNED AUTO_INCREMENT,
-   `user_name` VARCHAR(100) NOT NULL,
+   `username` VARCHAR(100) NOT NULL,
    `password` VARCHAR(40) NOT NULL,
    PRIMARY KEY ( `id` )
 )ENGINE=InnoDB DEFAULT CHARSET=UTF8;
